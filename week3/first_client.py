@@ -6,14 +6,4 @@ sock.connect(addr)
 
 msg = sock.recv(1024)
 print(msg.decode())
-
-# 이름 전송
-name = "Yeonji Kim"
-sock.send(name.encode())
-
-# 학번 수신
-data = sock.recv(4)
-student_id = int.from_bytes(data, 'big')
-print(student_id)
-
 sock.close()
